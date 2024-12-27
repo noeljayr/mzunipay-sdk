@@ -1,23 +1,38 @@
 {
-  "name": "mzunipay-sdk-package",
+  "name": "mzunipay-sdk",
   "license": "MIT",
-  "version": "1.0.19",
+  "version": "1.0.56",
   "description": "A Mzunipay SDK for easy merchant integration with their e-commerce apps",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "browser": "dist/index.iife.js",
+  "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts && rollup -c",
+    "lint": "tsc"
+  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "rollup": "^4.29.1",
+    "rollup-plugin-typescript2": "^0.36.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
-  },
-  "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts",
-    "lint": "tsc"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.10",
     "tsc-init": "^2.1.0",
     "tsup": "^8.3.5"
-  }
+  },
+  "keywords": [
+    "Mzunipay",
+    "SDK",
+    "Mzuzu University",
+    "MzuniPay",
+    "Free payment",
+    "Mzuni Wallet"
+  ]
 }

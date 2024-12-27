@@ -1,13 +1,19 @@
-import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import typescript from 'rollup-plugin-typescript2';
 
 export default {
-  input: 'index.ts',
+  input: 'index.ts', // Your entry file
   output: {
     file: 'dist/index.umd.js',
     format: 'umd',
-    name: 'MzuniPay',
+    name: 'MzuniPay', // This is the global variable name
+    sourcemap: true,
   },
-  plugins: [typescript(), resolve(), commonjs()],
+  plugins: [
+    resolve(),
+    commonjs(),
+    typescript(),
+  ],
 };
+
