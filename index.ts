@@ -37,7 +37,7 @@ class MzuniPay {
     description?: string;
   }): Promise<any> {
     const response = await fetch(
-      `http://localhost:5000/api/transactions/merchant/one-time`,
+      `https://mzunipay-v2.onrender.com/api/transactions/merchant/one-time`,
       {
         method: "POST",
         headers: {
