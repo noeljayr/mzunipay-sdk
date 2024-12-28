@@ -1,7 +1,7 @@
 {
   "name": "mzunipay-sdk",
   "license": "MIT",
-  "version": "1.0.56",
+  "version": "1.0.57",
   "description": "A Mzunipay SDK for easy merchant integration with their e-commerce apps",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
